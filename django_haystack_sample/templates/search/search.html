@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="page-header">
+    <h3>
+        Search Results
+    </h3>
+</div>
+
+<div class="row">
+    <div class="span12">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Text
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for result in page.object_list %}
+            <tr>
+                <td>{{ result.object.name }}
+                </td>
+                <td>{{ result.object.body }}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>No results found.</tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

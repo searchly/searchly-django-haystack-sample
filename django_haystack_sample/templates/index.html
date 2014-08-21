@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link rel="stylesheet" href='/media/styles/bootstrap.min.css' type="text/css" media="screen"/>
+    <link rel="stylesheet" href='/media/styles/bootstrap-responsive.min.css' type="text/css" media="screen"/>
+
+    <title>Searchly Django Haystack Sample</title>
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a href="/" class="brand">Searchly Django Haystack Sample</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <form action="/search" method="get" class="navbar-search pull-left">
+                        <input type="text" placeholder="Search" class="search-query span2" name="q">
+                    </form>
+                </ul>
+            </div>
+            <!-- /.nav-collapse -->
+        </div>
+    </div>
+    <!-- /navbar-inner -->
+</div>
+
+<div class="container">
+
+    {% block content %}
+
+    <div class="row">
+        <div class="span12">
+            <div class="hero-unit">
+                <h1>
+                    Searchly Sample Django Application.</h1>
+                <br/>
+
+                <p>
+                    This example illustrates basic search features of SearchBox.io (ElasticSearch as
+                    service).</p>
+
+                <p>
+                    Each CRUD operation on documents is reflected to search index in real time.</p>
+
+                <p>
+                    To test SearchBox.io's search features login to admin screen and create new documents.</p>
+
+                <p>
+                    Sample application is using <a href="http://haystacksearch.org/">Haystack</a> moduler search
+                    for Django and
+                    <a href="https://github.com/toastdriven/pyelasticsearch">pyelasticsearch (toastdriven fork) </a>
+                    Python ElasticSearch
+                    client to integrate with SearchBox.io.</p>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <hr>
+    <footer class="footer"><p>Searchly.com</p>
+
+        <p>Built with<a href="http://twitter.github.com/bootstrap" target="_blank"> Bootstrap</a></p></footer>
+
+</div>
+
+</body>
+</html>
