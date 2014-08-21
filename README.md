@@ -1,6 +1,6 @@
-## Searchly.com Sample Django Haystack Application.
+## Searchly Sample Django Haystack Application.
 
-This example illustrates basic search features of Searchly.com (Search as a service powered by Elastisearch).
+This example illustrates basic search features of [Searchly](http://www.searchly.com) (Search as a service powered by Elastisearch).
 
 Each CRUD operation on documents is reflected to search index in real time.
 
